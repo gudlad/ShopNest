@@ -1,0 +1,97 @@
+@charset "ISO-8859-1";
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+#head {
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 30px;
+}
+
+.register {
+    max-width: 500px;
+    max-height:700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color:green;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 64);
+}
+
+
+.register_ {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  height: 350px;
+  background-color: green;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  padding: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.textarea {
+    resize: none;
+}
+
+#sub {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    padding-right:20px;
+    padding-left:20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+#sub:hover {
+    background-color: #808080;
+}
+
+a:hover {
+    color: #000;
+}
