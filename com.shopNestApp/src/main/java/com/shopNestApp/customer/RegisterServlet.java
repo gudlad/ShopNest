@@ -23,7 +23,6 @@ public class RegisterServlet extends HttpServlet{
 		String gender=req.getParameter("gender");
 		String address=req.getParameter("address");
 		
-//		resp.getWriter().print(uname+"\n"+mail+"\n"+pass+"\n"+gender+"\n"+address);
 		
 			String status=DataInjector.addCustomer(uname, mail, pass, gender, address);
 			System.out.println("\nRegistration "+status);

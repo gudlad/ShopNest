@@ -7,7 +7,6 @@ public class DataInjector{
 	public static String addCustomer(String uname,String mail,String pass,String gender,String address)
 	{
 		
-//		String driver="oracle.jdbc.driver.OracleDriver";
 		String url="jdbc:oracle:thin:@localhost:1521:xe";
 		String user="system";
 		String password="pwd";
@@ -38,5 +37,34 @@ public class DataInjector{
 			return registerStatus;
 		}
 			
+	}
+
+	public static void addProduct(int pid, String pname, String pdesc, long pprice, String pimg) {
+	
+		String url="jdbc:oracle:thin:@localhost:1521:xe";
+		String user="system";
+		String password="pwd";
+		String sql="INSERT INTO PRODUCTS VALUES(?,?,?,?,?)";
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection con=DriverManager.getConnection(url,user,password);
+			System.out.print("db connection succesful");
+			PreparedStatement ps=con.prepareStatement(sql);
+			ps.setInt(1, pid);
+			ps.setString(2,pname );
+			ps.setString(3, pdesc);
+			ps.setLong(4, pprice);
+			ps.setString(5, pimg);
+			ps.executeUpdate();
+			con.close();
+			
+		}
+		catch (Exception ex) {
+			
+			System.out.println("Problem in adding product!!!");
+			ex.printStackTrace();
+		}
+		
 	}
 }
